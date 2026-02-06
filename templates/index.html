@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Student Performance Predictor</h1>
+    <p>Predict academic performance using Machine Learning</p>
+
+    <form method="POST">
+        <input type="number" step="0.1" name="hours" placeholder="📘 Hours Studied" required>
+
+        <input type="number" step="0.1" name="previous" placeholder="📊 Previous Scores" required>
+
+        <input type="number" step="0.1" name="sleep" placeholder="😴 Sleep Hours" required>
+
+        <input type="number" step="0.1" name="papers" placeholder="📝 Sample Question Papers Practiced" required>
+
+        <button type="submit">Predict Performance</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            📈 Predicted Performance Score: <span>{{ prediction }}</span>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
