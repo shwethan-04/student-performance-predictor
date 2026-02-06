@@ -2,34 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student Performance Predictor</title>
+    <title>EduPredict | Student Performance</title>
     <link rel="stylesheet" href="/static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<nav class="navbar">
+    <div class="logo">🎓 EduPredict</div>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+</nav>
+
 <div class="container">
-    <h1>🎓 Student Performance Predictor</h1>
-    <p>Predict academic performance using Machine Learning</p>
+    <h1>Student Performance Predictor</h1>
+    <p>Predict academic outcomes using machine learning</p>
 
     <form method="POST">
         <input type="number" step="0.1" name="hours" placeholder="📘 Hours Studied" required>
-
         <input type="number" step="0.1" name="previous" placeholder="📊 Previous Scores" required>
-
         <input type="number" step="0.1" name="sleep" placeholder="😴 Sleep Hours" required>
-
-        <input type="number" step="0.1" name="papers" placeholder="📝 Sample Question Papers Practiced" required>
+        <input type="number" step="0.1" name="papers" placeholder="📝 Sample Papers Practiced" required>
 
         <button type="submit">Predict Performance</button>
     </form>
 
     {% if prediction %}
-        <div class="result">
-            📈 Predicted Performance Score: <span>{{ prediction }}</span>
-        </div>
+    <div class="result">
+        📈 Predicted Score: <span>{{ prediction }}</span><br>
+        🏷️ Performance Level: <b>{{ category }}</b>
+    </div>
     {% endif %}
+
+    <div class="cards">
+        <div class="card">
+            📊
+            <h3>ML Prediction</h3>
+            <p>Regression-based academic performance estimation</p>
+        </div>
+
+        <div class="card">
+            ⚡
+            <h3>Fast & Lightweight</h3>
+            <p>Optimized model for instant results</p>
+        </div>
+
+        <div class="card">
+            🎯
+            <h3>Early Warning</h3>
+            <p>Helps identify students needing support</p>
+        </div>
+    </div>
 </div>
+
+<footer>
+    © 2026 EduPredict | ML Project
+</footer>
 
 </body>
 </html>

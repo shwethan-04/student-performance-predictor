@@ -1,30 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #ffb703, #fb8500);
     min-height: 100vh;
+    padding-top: 90px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+    padding: 15px 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .container {
-    background: #ffffff;
-    padding: 35px;
+    background: white;
+    width: 380px;
+    margin: auto;
+    padding: 30px;
     border-radius: 20px;
-    width: 360px;
-    text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-h1 {
-    color: #fb8500;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #555;
-    font-size: 14px;
+    text-align: center;
 }
 
 input {
@@ -33,7 +55,6 @@ input {
     margin: 10px 0;
     border-radius: 12px;
     border: 1px solid #ddd;
-    font-size: 14px;
 }
 
 button {
@@ -47,11 +68,6 @@ button {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 .result {
@@ -60,9 +76,25 @@ button:hover {
     background: #fff3cd;
     border-radius: 12px;
     font-weight: 600;
-    color: #d62828;
 }
 
-.result span {
-    color: #fb8500;
+.cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 13px;
+    flex: 1;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
 }
